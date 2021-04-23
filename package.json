@@ -1,0 +1,26 @@
+{
+  "name": "compasso-uol",
+  "version": "1.0.0",
+  "description": "API Rest para recrutamento no Compasso UOL",
+  "main": "src/init.js",
+  "scripts": {
+    "test": "mocha --exit",
+    "start": "nodemon src/init.js"
+  },
+  "keywords": [
+    "api",
+    "NodeJS",
+    "MongoDB"
+  ],
+  "author": "Alan Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "config": "^3.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mocha": "^7.1.1",
+    "mongoose": "^5.9.6",
+    "supertest": "^4.0.2"
+  }
+}

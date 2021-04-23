@@ -1,0 +1,15 @@
+{
+    "port": 4001,
+    "mongo_db": {
+        "habilitado": true,
+        "host": "localhost",
+        "database": "compasso"
+    },
+    "email": {
+        "habilitado": false,
+        "hostSMTP": "",
+        "name": "",
+        "address": "",
+        "password": ""
+    }
+}
