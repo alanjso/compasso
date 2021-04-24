@@ -11,7 +11,7 @@ No windows
 - pm2 start .\ecosystem.config.js 
 
 No linux
-pm2 start ecosystem.config.js
+- pm2 start ecosystem.config.js
 
 ## Objetivo
 
