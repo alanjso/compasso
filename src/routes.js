@@ -6,5 +6,6 @@ routes.get('/health', (req, res) => {
 });
 
 require('./app/crud/crud-route')(routes);
+require('./app/city/city-route')(routes);
 
 module.exports = routes;

@@ -12,6 +12,5 @@ if (config.get('mongo_db').habilitado) {
 server.use(express.json());
 server.use(cors());
 server.use(routes);
-server.use('/v1', routes);
 
 module.exports = server;
