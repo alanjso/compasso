@@ -1,6 +1,17 @@
 # Roteiro Entrevista Node.js
 
-## NÃO FAÇA FORK DESSE REPOSITÓRIO
+## Inicialização
+
+Executar os comandos a seguir no terminal dentro da pasta do projeto:
+
+- npm install
+- npm install pm2 -g
+
+No windows
+- pm2 start .\ecosystem.config.js 
+
+No linux
+pm2 start ecosystem.config.js
 
 ## Objetivo
 
@@ -44,14 +55,14 @@ A avaliação será feita da seguinte forma:
 
 Requisitos Obrigatórios:
 
-- Operações acima funcionando sem erros
-- Código válido, estruturado e organizado para que possamos testar sua aplicação
+- Operações acima funcionando sem erros √
+- Código válido, estruturado e organizado para que possamos testar sua aplicação √
 
-Utilização de Node 10+ o resto é por sua conta escolher.
+Utilização de Node 10+ o resto é por sua conta escolher. √
 
 Dicas:
 
-- Tenha em mente que o seu avaliador irá executar o código antes de falar com você;
+- Tenha em mente que o seu avaliador irá executar o código antes de falar com você; √
 - Procure fazer uma entrega simples mas consistente, usando a experiência e conhecimento adquiridos durante sua carreira;
 - Não se preocupe em entregar algo extremamente completo ou rebuscado, não vamos usar este código em produção;
 - Tudo será avaliado, dê o seu melhor!
