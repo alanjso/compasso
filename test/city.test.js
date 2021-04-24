@@ -81,7 +81,25 @@ describe('########## CITY ##########\n', function () {
 
     it('Get filtrando por nome de uma cidade ou estado e recebe array com os resultados e status code 200', async () => {
         let filter = 'inserir busca aqui'
-        await request.get(`${SERVICE}/filter/${filter}`)
+        await request.get(`${SERVICE}/filter/all/${filter}`)
+            .expect(function (res) {
+                assert.isArray(res.body);
+                assert.equal(res.statusCode, '200');
+            });
+    });
+
+    it('Get filtrando por nome de uma cidade e recebe array com os resultados e status code 200', async () => {
+        let filter = 'inserir busca aqui'
+        await request.get(`${SERVICE}/filter/name/${filter}`)
+            .expect(function (res) {
+                assert.isArray(res.body);
+                assert.equal(res.statusCode, '200');
+            });
+    });
+
+    it('Get filtrando por estado de uma cidade e recebe array com os resultados e status code 200', async () => {
+        let filter = 'inserir busca aqui'
+        await request.get(`${SERVICE}/filter/state/${filter}`)
             .expect(function (res) {
                 assert.isArray(res.body);
                 assert.equal(res.statusCode, '200');
