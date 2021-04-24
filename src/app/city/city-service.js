@@ -58,7 +58,7 @@ module.exports = {
 
     },
 
-    search: async (req, res) => {
+    searchAll: async (req, res) => {
         // Retorna uma cidade procurando pelo nome da cidade ou estado
         try {
             let filter = req.params.filter
@@ -75,4 +75,31 @@ module.exports = {
         }
     },
 
+    searchName: async (req, res) => {
+        // Retorna uma cidade procurando pelo nome da cidade
+        try {
+            let filter = req.params.filter
+            const response = await City.find(
+                { "name": { $regex: `${filter}`, '$options': 'i' } },
+            ).sort({ name: 1 });
+
+            res.status(200).json(response);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    },
+
+    searchState: async (req, res) => {
+        // Retorna uma cidade procurando pelo estado
+        try {
+            let filter = req.params.filter
+            const response = await City.find(
+                { "state": { $regex: `${filter}`, '$options': 'i' } },
+            ).sort({ name: 1 });
+
+            res.status(200).json(response);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    },
 }

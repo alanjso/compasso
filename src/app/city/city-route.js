@@ -14,5 +14,9 @@ module.exports = routes => {
 
     routes.get(`${SERVICE}/:id`, cityService.getById);
 
-    routes.get(`${SERVICE}/filter/:filter`, cityService.search);
+    routes.get(`${SERVICE}/filter/all/:filter`, cityService.searchAll);
+
+    routes.get(`${SERVICE}/filter/name/:filter`, cityService.searchName);
+
+    routes.get(`${SERVICE}/filter/state/:filter`, cityService.searchState);
 }
