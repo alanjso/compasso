@@ -38,7 +38,7 @@ describe('########## CLIENT ##########\n', function () {
 
     it('Get por id de um cliente que existe e recebe status code 200', async () => {
 
-        const cities = await City.find({ 'name': 'Porto' });
+        const cities = await City.find({ 'name': 'Porto Alegre' });
         let client = {
             'name': 'Axley Rodrigues de Lima',
             'sex': 'Mulher',
@@ -57,7 +57,7 @@ describe('########## CLIENT ##########\n', function () {
 
     it('Deleta um cliente que existe e recebe status code 200', async () => {
 
-        const cities = await City.find({ 'name': 'Porto' });
+        const cities = await City.find({ 'name': 'Porto Alegre' });
         let client = {
             'name': 'Axley Rodrigues de Lima',
             'sex': 'Mulher',
@@ -75,7 +75,7 @@ describe('########## CLIENT ##########\n', function () {
     });
 
     it('Edita um cliente que existe e recebe status code 200', async () => {
-        const cities = await City.find({ 'name': 'Passo' });
+        const cities = await City.find({ 'name': 'Passo Fundo' });
 
         let client = {
             'name': 'uol',
