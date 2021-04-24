@@ -22,10 +22,11 @@ describe('########## CITY ##########\n', function () {
             });
     });
 
-    it('Lista cidade e espera status 200', async () => {
+    it('Lista cidades. Espera receber um array e status 200', async () => {
         await request.get(`${SERVICE}`)
             .expect(function (res) {
                 assert.equal(res.statusCode, '200');
+                assert.isArray(res.body);
             });
 
     });
