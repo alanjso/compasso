@@ -2,8 +2,8 @@
 
 ## Model
 
-```json
-{
+```javascript
+city: {
     name: {
         type: String,
     },

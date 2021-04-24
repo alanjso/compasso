@@ -1,8 +1,9 @@
 # Client Documentation
 
 ## Model
-```json
-{
+
+```javascript
+client: {
     name: {
         type: String,
     },
@@ -24,8 +25,8 @@
 }
 ```
 
-```json
-{
+```javascript
+citySchema: {
     name: {
         type: String
     }
