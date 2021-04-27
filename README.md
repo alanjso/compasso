@@ -1,8 +1,8 @@
 # Roteiro Entrevista Node.js
 
-## Inicialização
-
-Executar os comandos a seguir no terminal dentro da pasta do projeto:
+====================================================================================================
+## Inicialização com PM2 ou Docker
+### Executar os comandos a seguir no terminal dentro da pasta do projeto para inicialização com PM2:
 
 - npm install
 - npm install pm2 -g
@@ -12,6 +12,21 @@ No windows
 
 No linux
 - pm2 start ecosystem.config.js
+
+### Executar os comandos a seguir no terminal dentro da pasta do projeto para inicialização com Docker:
+- Alterar a informação "host" do arquivo development.json de "host": "localhost" para "host": "mongo"
+- docker build -t compasso-uol .  
+- docker run -d -p 4001:4001 --link mongo --name compasso-uol -e "NODE_ENV=development" -e TZ=Brazil/East compasso-uol
+- docker logs -f compasso-uol
+
+OBS: Em ambos os cenários (pm2 ou docker) o MongoDB encontrasse rodando com docker e mapeado as portas 27017-27019->27017-27019 e nome de imagem e container 'mongo'
+
+## Ambiente de desenvolvimento
+### Executar os comandos a seguir no terminal dentro da pasta do projeto para inicialização com nodemon
+- npm install
+- npm install nodemon -g
+- nodemon start
+====================================================================================================
 
 ## Objetivo
 
