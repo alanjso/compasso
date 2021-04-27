@@ -1,6 +1,7 @@
 # Roteiro Entrevista Node.js
 
-====================================================================================================
+=========================================================================
+
 ## Inicialização com PM2 ou Docker
 ### Executar os comandos a seguir no terminal dentro da pasta do projeto para inicialização com PM2:
 
@@ -26,7 +27,8 @@ OBS: Em ambos os cenários (pm2 ou docker) o MongoDB encontrasse rodando com doc
 - npm install
 - npm install nodemon -g
 - nodemon start
-====================================================================================================
+
+=========================================================================
 
 ## Objetivo
 
